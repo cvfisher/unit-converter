@@ -3,13 +3,20 @@ const convertBtn = document.getElementById("convert-btn");
 const lengthEl = document.getElementById("length-el");
 const volumeEl = document.getElementById("volume-el");
 const massEl = document.getElementById("mass-el");
+const inchesEl = document.getElementById("inches-el");
 
 const conversionFactors = {
+  inchesToCentimeters: 2.5416,
   meterToFeet: 3.281,
   literToGallon: 0.264,
   kiloToPound: 2.204,
 };
 
+function convertInches(value) {
+  const toCm = (value * conversionFactors.inchesToCentimeters).toFixed(3);
+  const toInches = (value / conversionFactors.inchesToCentimeters).toFixed(3);
+  return `${value} inches = ${toCm} centimeters | ${value} cm = ${toInches} inches`;
+}
 function convertLength(value) {
   const toFeet = (value * conversionFactors.meterToFeet).toFixed(3);
   const toMeters = (value / conversionFactors.meterToFeet).toFixed(3);
@@ -32,6 +39,7 @@ convertBtn.addEventListener("click", function () {
   if (isNaN(inputValue)) {
     alert("Please enter a valid number.");
   } else {
+    inchesEl.textContent = convertInches(inputValue);
     lengthEl.textContent = convertLength(inputValue);
     volumeEl.textContent = convertVolume(inputValue);
     massEl.textContent = convertMass(inputValue);
