@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Inter", serif;
+  font-size: 14px;
+  color: #353535;
+  background: #1c1c1c;
+}
+
+.container {
+  width: 550px;
+  margin: 30px auto;
+  position: relative;
+}
+
+.toggle-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 25px 0 0;
+}
+
+input[type="checkbox"] {
+  accent-color: #b295ff;
+}
+
+.hero {
+  background: #6943fe;
+  color: white;
+  padding: 30px;
+}
+
+#heading {
+  margin-bottom: 30px;
+}
+
+.main {
+  background: #f4f4f4;
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  background: white;
+  padding: 5px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#input-el,
+#convert-btn {
+  width: 120px;
+}
+
+#input-el::placeholder {
+  color: white;
+}
+
+#input-el {
+  color: white;
+  font-size: 58px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
+  background: inherit;
+  border: 2px solid #b295ff;
+  border-radius: 5px;
+}
+#convert-btn {
+  padding: 18px 9px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  background: white;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+#convert-btn:hover {
+  background: #b295ff;
+  color: white;
+}
+
+.section-heading {
+  color: #b295ff;
+}
+
+.dark-mode {
+  background: #1f2937;
+  color: white;
+}
+
+.dark-mode .section {
+  background: #273549;
+}

@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Unit Converter</title>
     <script src="script.js" defer></script>
@@ -10,28 +16,30 @@
   <body>
     <div class="container">
       <div class="hero">
+        <div class="toggle-container">
+          <label for="dark-mode-toggle">Dark mode</label>
+          <input type="checkbox" id="dark-mode-toggle" />
+        </div>
         <h1 id="heading">Metric/Imperial Unit Converter</h1>
-        <input type="text" class="" id="unit-el" placeholder="0" />
-        <button id="convert-btn">Convert</button>
+        <div class="input-container">
+          <input type="text" class="" id="input-el" placeholder="0" />
+          <button id="convert-btn">Convert</button>
+        </div>
       </div>
       <div class="main">
         <div class="section">
-          <h3 class="unit-heading">Length (Meter/Feet)</h3>
-          <p id="length-conversion">
-            0 meters = 0.000 feet | 0 feet = 0.000 meters
-          </p>
+          <h3 class="section-heading">Length (Meters/Feet)</h3>
+          <p id="length-el">0 meters = 0.000 feet | 0 feet = 0.000 meters</p>
         </div>
         <div class="section">
-          <h3 class="unit-heading">Length (Meter/Feet)</h3>
-          <p id="volume-conversion">
+          <h3 class="section-heading">Volume(Liters/Gallon)</h3>
+          <p id="volume-el">
             0 liters = 0.000 gallons | 0 gallons = 0.000 liters
           </p>
         </div>
         <div class="section">
-          <h3 class="unit-heading">Length (Meter/Feet)</h3>
-          <p id="mass-conversion">
-            0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos
-          </p>
+          <h3 class="section-heading">Mass(Kilos/Pounds)</h3>
+          <p id="mass-el">0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos</p>
         </div>
       </div>
     </div>
